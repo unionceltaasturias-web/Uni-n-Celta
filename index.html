@@ -555,11 +555,17 @@ footer{backdrop-filter:blur(12px)}
 .comments-card-heading h3{font:600 clamp(1.35rem,3vw,1.8rem) Georgia,serif;color:#f4e3b5;margin:0 0 4px}
 .comments-card-heading p{color:#d3dfd5;margin:0;font-size:.92rem}
 .comments-setup{
-  min-height:240px;padding:clamp(24px,4vw,44px);
-  border:1px dashed rgba(227,196,119,.4);border-radius:16px;
-  background:rgba(4,22,16,.25);text-align:center;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  width:100%;
+  min-height:0;
+  padding:clamp(12px,2vw,22px);
+  border:1px solid rgba(227,196,119,.22);
+  border-radius:16px;
+  background:rgba(4,22,16,.25);
+  overflow:hidden;
 }
+.comments-setup .giscus,
+.comments-setup .giscus-frame{width:100%;max-width:100%}
+.comments-setup .giscus-frame{border:0}
 .comments-setup-icon{font-size:2.1rem;margin-bottom:12px}
 .comments-setup h4{font:600 1.45rem Georgia,serif;color:#f4e3b5;margin:0 0 10px}
 .comments-setup p{max-width:650px;color:#e0e9df;margin:0 auto 12px;line-height:1.75}
@@ -668,10 +674,21 @@ footer{backdrop-filter:blur(12px)}
         </div>
       </div>
       <div class="comments-setup" id="giscus-comments">
-        <span class="comments-setup-icon" aria-hidden="true">💬</span>
-        <h4>Este espacio está preparado</h4>
-        <p>Los comentarios públicos se conectarán con GitHub Discussions para que las aportaciones queden guardadas y puedan verse desde cualquier dispositivo.</p>
-        <p class="comments-setup-small">Falta vincular el repositorio de GitHub para activar la publicación y lectura de comentarios.</p>
+        <script src="https://giscus.app/client.js"
+                data-repo="unionceltaasturias-web/Uni-n-Celta"
+                data-repo-id="R_kgDOV2jVNQ"
+                data-category="General"
+                data-category-id="DIC_kwDOV2jVNc4DLuHo"
+                data-mapping="pathname"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="bottom"
+                data-theme="preferred_color_scheme"
+                data-lang="es"
+                crossorigin="anonymous"
+                async>
+        </script>
       </div>
     </div>
   </div>
